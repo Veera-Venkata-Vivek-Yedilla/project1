@@ -159,85 +159,16 @@
       <label for="aspiration">What do you aspire to become?</label>
       <select id="aspiration" name="aspiration">
         <option value="">Select...</option>
-        <option value="actuary">Actuary</option>
-        <option value="advertisement-executive">Advertisement Executive</option>
-        <option value="air-hostess">Air Hostess</option>
-        <option value="architect">Architect</option>
-        <option value="architectural-engineer">Architectural Engineer</option>
-        <option value="army-officer">Army Officer</option>
-        <option value="auditor-manager">Audit Manager</option>
-        <option value="aviation-technician">Aviation Technician</option>
-        <option value="biochemist">Biochemist</option>
-        <option value="biologist">Biologist</option>
-        <option value="basketball-player">Basketball Player</option>
-        <option value="business-consultant">Business Consultant</option>
-        <option value="chef">Chef</option>
-        <option value="chemist">Chemist</option>
-        <option value="choreographer">Choreographer</option>
-        <option value="civil-engineer">Civil Engineer</option>
-        <option value="content-creator">Content Creator</option>
-        <option value="cricketer">Cricketer</option>
-        <option value="data-scientist">Data Scientist</option>
-        <option value="dentist">Dentist</option>
-        <option value="designer">Designer</option>
-        <option value="designer-fashion">Fashion Designer</option>
-        <option value="designer-graphic">Graphic Designer</option>
-        <option value="designer-interior">Interior Designer</option>
-        <option value="defense">Defense Services</option>
-        <option value="dentist">Dentist</option>
-        <option value="doctor">Doctor</option>
-        <option value="economist">Economist</option>
-        <option value="engineer-chemical">Chemical Engineer</option>
-        <option value="engineer-civil">Civil Engineer</option>
-        <option value="engineer-electrical">Electrical Engineer</option>
-        <option value="engineer-mechanical">Mechanical Engineer</option>
-        <option value="event-planner">Event Planner</option>
-        <option value="fashion-stylist">Fashion Stylist</option>
-        <option value="financial-analyst">Financial Analyst</option>
-        <option value="forensic-scientist">Forensic Scientist</option>
-        <option value="geologist">Geologist</option>
-        <option value="graphic-designer">Graphic Designer</option>
-        <option value="hotel-manager">Hotel Manager</option>
-        <option value="human-resources-manager">HR Manager</option>
-        <option value="influencer">Influencer</option>
-        <option value="investment-banker">Investment Banker</option>
-        <option value="journalist">Journalist</option>
-        <option value="lawyer">Lawyer</option>
-        <option value="marine-biologist">Marine Biologist</option>
-        <option value="marine-engineer">Marine Engineer</option>
-        <option value="mathematician">Mathematician</option>
-        <option value="mechanical-engineer">Mechanical Engineer</option>
-        <option value="motivational-speaker">Motivational Speaker</option>
-        <option value="nurse">Nurse</option>
-        <option value="network-engineer">Network Engineer</option>
-        <option value="nuclear-engineer">Nuclear Engineer</option>
-        <option value="pharmacist">Pharmacist</option>
-        <option value="pilot">Pilot</option>
-        <option value="poet">Poet</option>
-        <option value="politician">Politician</option>
-        <option value="public-servant">Public Servant</option>
-        <option value="public-relations-manager">Public Relations Manager</option>
-        <option value="real-estate-agent">Real Estate Agent</option>
-        <option value="researcher">Researcher</option>
-        <option value="robotics-engineer">Robotics Engineer</option>
-        <option value="scientist">Scientist</option>
-        <option value="social-worker">Social Worker</option>
-        <option value="software-developer">Software Developer</option>
         <option value="software-engineer">Software Engineer</option>
-        <option value="stock-broker">Stock Broker</option>
+        <option value="doctor">Doctor</option>
         <option value="teacher">Teacher</option>
-        <option value="teacher-education">Teacher (Education)</option>
-        <option value="teacher-maths">Maths Teacher</option>
-        <option value="teacher-science">Science Teacher</option>
-        <option value="teacher-english">English Teacher</option>
-        <option value="tax-consultant">Tax Consultant</option>
-        <option value="tax-officer">Tax Officer</option>
-        <option value="veterinarian">Veterinarian</option>
-        <option value="web-developer">Web Developer</option>
-        <option value="youtuber">YouTuber</option>
+        <option value="engineer">Engineer</option>
+        <!-- Add more options as needed -->
       </select>
-      <button type="submit">Get Guidance!</button>
+      <button type="button" id="getGuidanceBtn">Get Guidance!</button>
     </form>
+
+    <div id="guidance"></div>
   </section>
 
   <div class="footer">
@@ -252,5 +183,42 @@
       </p>
     </div>
   </div>
+
+  <script>
+    document.getElementById("getGuidanceBtn").addEventListener("click", function () {
+      const grade = document.getElementById("currentStudy").value;
+      const career = document.getElementById("aspiration").value;
+      const guidanceContainer = document.getElementById("guidance");
+
+      if (grade === "10th" && career === "software-engineer") {
+        guidanceContainer.innerHTML = `
+          <h2>Software Engineer Guidance</h2>
+          <p><strong>What does a Software Engineer do?</strong><br>
+          A Software Engineer designs, develops, tests, and maintains software applications and systems. They work with programming languages to create software solutions for various problems.</p>
+
+          <p><strong>Roadmap from 10th grade to become a Software Engineer:</strong><br>
+          - Focus on mathematics and computer science in 10th grade.<br>
+          - In 12th grade, choose science subjects (Physics, Chemistry, and Mathematics).<br>
+          - After 12th, pursue a Bachelor's degree in Computer Science or Engineering.<br>
+          - Learn programming languages (like Python, Java, or C++) and develop hands-on experience through internships and personal projects.<br>
+          - After graduation, work as a software developer and continuously improve your skills.</p>
+        `;
+      } else if (grade === "12th" && career === "doctor") {
+        guidanceContainer.innerHTML = `
+          <h2>Doctor Career Guidance</h2>
+          <p><strong>What does a Doctor do?</strong><br>
+          A Doctor provides medical care to patients, diagnoses illnesses, and helps in the treatment of diseases. They also guide patients on health-related matters and prescribe medicines.</p>
+
+          <p><strong>Roadmap from 12th grade to become a Doctor:</strong><br>
+          - Choose Biology, Chemistry, and Physics in 12th grade.<br>
+          - After 12th, appear for medical entrance exams like NEET.<br>
+          - Pursue an MBBS degree (Bachelor of Medicine and Bachelor of Surgery).<br>
+          - After MBBS, opt for specialization if desired and start practicing medicine.</p>
+        `;
+      } else {
+        guidanceContainer.innerHTML = "<p>Please select both grade and career path to get guidance.</p>";
+      }
+    });
+  </script>
 </body>
 </html>
