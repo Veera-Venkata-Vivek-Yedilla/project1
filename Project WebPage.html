@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Path Guidance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header and Footer */
+    .header, .footer {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    .header h1, .footer h2 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .header p, .footer p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+    }
+
+    /* Input Section */
+    .input-box {
+      background: #fff;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      max-width: 90%;
+      width: 400px; /* Default width for larger screens */
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-box h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #0073e6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    select, input {
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    button {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+    }
+
+    /* Footer Content */
+    .footer-content {
+      max-width: 800px; 
+      margin: 0 auto;
+      padding: 0 1rem; 
+      text-align: justify; 
+      line-height: 1.8; 
+      font-size: 1rem;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .header h1, .footer h2 {
+        font-size: 2rem;
+      }
+
+      .header p, .footer p {
+        font-size: 1rem;
+      }
+
+      .input-box {
+        padding: 1rem;
+      }
+
+      .input-box h2 {
+        font-size: 1.5rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1, .footer h2 {
+        font-size: 1.8rem;
+      }
+
+      .header p, .footer p {
+        font-size: 0.9rem;
+      }
+
+      .input-box {
+        padding: 0.8rem;
+      }
+
+      .input-box h2 {
+        font-size: 1.2rem;
+      }
+
+      button {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Career Path Guidance</h1>
+    <p>Helping students navigate their way to success!</p>
+  </div>
+
+  <section class="input-box">
+    <h2>Find Your Career Path</h2>
+    <form>
+      <label for="current-study">What are you currently studying?</label>
+      <select class="form-select" id="currentStudy" required>
+        <option value="">Select...</option>
+        <option value="10th">10th Grade</option>
+        <option value="intermediate">Intermediate (MPC, BiPC, etc.)</option>
+        <option value="diploma">Diploma/Polytechnic</option>
+        <option value="graduation">Graduation (B.Tech, B.Com, etc.)</option>
+      </select>
+      <label for="aspiration">What do you aspire to become?</label>
+      <select id="aspiration" name="aspiration">
+        <option value="">Select...</option>
+        <option value="actuary">Actuary</option>
+        <option value="advertisement-executive">Advertisement Executive</option>
+        <option value="air-hostess">Air Hostess</option>
+        <option value="architect">Architect</option>
+        <option value="architectural-engineer">Architectural Engineer</option>
+        <option value="army-officer">Army Officer</option>
+        <option value="auditor-manager">Audit Manager</option>
+        <option value="aviation-technician">Aviation Technician</option>
+        <option value="biochemist">Biochemist</option>
+        <option value="biologist">Biologist</option>
+        <option value="basketball-player">Basketball Player</option>
+        <option value="business-consultant">Business Consultant</option>
+        <option value="chef">Chef</option>
+        <option value="chemist">Chemist</option>
+        <option value="choreographer">Choreographer</option>
+        <option value="civil-engineer">Civil Engineer</option>
+        <option value="content-creator">Content Creator</option>
+        <option value="cricketer">Cricketer</option>
+        <option value="data-scientist">Data Scientist</option>
+        <option value="dentist">Dentist</option>
+        <option value="designer">Designer</option>
+        <option value="designer-fashion">Fashion Designer</option>
+        <option value="designer-graphic">Graphic Designer</option>
+        <option value="designer-interior">Interior Designer</option>
+        <option value="defense">Defense Services</option>
+        <option value="dentist">Dentist</option>
+        <option value="doctor">Doctor</option>
+        <option value="economist">Economist</option>
+        <option value="engineer-chemical">Chemical Engineer</option>
+        <option value="engineer-civil">Civil Engineer</option>
+        <option value="engineer-electrical">Electrical Engineer</option>
+        <option value="engineer-mechanical">Mechanical Engineer</option>
+        <option value="event-planner">Event Planner</option>
+        <option value="fashion-stylist">Fashion Stylist</option>
+        <option value="financial-analyst">Financial Analyst</option>
+        <option value="forensic-scientist">Forensic Scientist</option>
+        <option value="geologist">Geologist</option>
+        <option value="graphic-designer">Graphic Designer</option>
+        <option value="hotel-manager">Hotel Manager</option>
+        <option value="human-resources-manager">HR Manager</option>
+        <option value="influencer">Influencer</option>
+        <option value="investment-banker">Investment Banker</option>
+        <option value="journalist">Journalist</option>
+        <option value="lawyer">Lawyer</option>
+        <option value="marine-biologist">Marine Biologist</option>
+        <option value="marine-engineer">Marine Engineer</option>
+        <option value="mathematician">Mathematician</option>
+        <option value="mechanical-engineer">Mechanical Engineer</option>
+        <option value="motivational-speaker">Motivational Speaker</option>
+        <option value="nurse">Nurse</option>
+        <option value="network-engineer">Network Engineer</option>
+        <option value="nuclear-engineer">Nuclear Engineer</option>
+        <option value="pharmacist">Pharmacist</option>
+        <option value="pilot">Pilot</option>
+        <option value="poet">Poet</option>
+        <option value="politician">Politician</option>
+        <option value="public-servant">Public Servant</option>
+        <option value="public-relations-manager">Public Relations Manager</option>
+        <option value="real-estate-agent">Real Estate Agent</option>
+        <option value="researcher">Researcher</option>
+        <option value="robotics-engineer">Robotics Engineer</option>
+        <option value="scientist">Scientist</option>
+        <option value="social-worker">Social Worker</option>
+        <option value="software-developer">Software Developer</option>
+        <option value="software-engineer">Software Engineer</option>
+        <option value="stock-broker">Stock Broker</option>
+        <option value="teacher">Teacher</option>
+        <option value="teacher-education">Teacher (Education)</option>
+        <option value="teacher-maths">Maths Teacher</option>
+        <option value="teacher-science">Science Teacher</option>
+        <option value="teacher-english">English Teacher</option>
+        <option value="tax-consultant">Tax Consultant</option>
+        <option value="tax-officer">Tax Officer</option>
+        <option value="veterinarian">Veterinarian</option>
+        <option value="web-developer">Web Developer</option>
+        <option value="youtuber">YouTuber</option>
+      </select>
+      <button type="submit">Get Guidance!</button>
+    </form>
+  </section>
+
+  <div class="footer">
+    <h2>Why I Started This Project</h2>
+    <div class="footer-content">
+      <p>
+        After completing my 10th grade, I found myself at a crossroads. 
+        While my parents were loving and supportive, they lacked the educational background to guide me toward the right career path.
+        As a result, my future was often shaped by the opinions of neighbors and well-meaning but uninformed advice. 
+        This lack of direction left me feeling confused and uncertain about my choices. 
+        It made me realize just how crucial it is for students to have access to proper guidance and resources when shaping their careers.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
