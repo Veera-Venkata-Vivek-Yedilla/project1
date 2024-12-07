@@ -1,0 +1,211 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: url('cbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333; /* Dark text for better readability */
+    text-align: center;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+
+/* Image on the right corner */
+.header img {
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Position it in the middle of the header */
+    right: 20px; /* Distance from the right edge */
+    transform: translateY(-50%); /* Adjust the image to be perfectly centered */
+    max-width: 100px; /* Image size */
+    height: auto;
+    border-radius: 50%;
+}
+/* Header */
+.header {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient background */
+    color: white;
+    padding: 30px 20px; /* Increased padding */
+    border-bottom: 5px solid #1c2833; /* Added border for definition */
+    position: relative;
+}
+
+.header h1 {
+    color: white;
+    font-size: 3em; /* Increased size */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+
+/* Center Content Section */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Center content vertically */
+    text-align: center;
+}
+.image-box {
+    margin-top: 20px;
+    clear: both;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image fits within its container */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+
+/* Input Box Section */
+.input-box {
+    background: #fff url('bg3.jpgs') no-repeat center center;
+    background-size: cover;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 500px;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for form */
+    border: 1px solid #ccc; /* Soft border for inputs */
+}
+
+.input-box h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2c3e50; /* Matching header text color */
+    text-align: center; /* Center the heading */
+}
+
+.input-box label {
+    font-size: 1.1em;
+    color: #555;
+    display: block;
+    margin: 10px 0;
+}
+
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-box button {
+    background-color: #3498db; /* Blue button */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10; /* Make sure the button is clickable and stays above other elements */
+    }
+
+
+.input-box button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Guidance Output Section */
+#guidance {
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #333; /* Slightly darker text color for readability */
+    background: linear-gradient(135deg, #ecf0f1, #bdc3c7); /* Gradient background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#guidance h3 {
+    font-size: 1.5em;
+    color: #2980b9; /* Soft blue for headings */
+    margin-bottom: 15px;
+    text-align: center; /* Center the heading */
+}
+
+#guidance p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient footer */
+    color: #ecf0f1; /* Lighter text for footer */
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.footer h2 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer .footer-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #ecf0f1; /* Lighter text color */
+}
+
+/* List Item Styles */
+ul {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px; /* Add left padding for proper alignment of bullets */
+}
+
+li {
+    font-size: 1.1em; /* Adjust font size if needed */
+    margin-bottom: 10px; /* Add margin between list items */
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+/* Footer Logo */
+.footer-logo img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the footer logo */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .input-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #guidance {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
