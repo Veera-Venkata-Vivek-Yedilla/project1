@@ -19,16 +19,6 @@ h1, h2{
 }
 
 
-/* Image on the right corner */
-.header img {
-    position: absolute; /* Position the image absolutely */
-    top: 50%; /* Position it in the middle of the header */
-    right: 20px; /* Distance from the right edge */
-    transform: translateY(-50%); /* Adjust the image to be perfectly centered */
-    max-width: 100px; /* Image size */
-    height: auto;
-    border-radius: 50%;
-}
 /* Header */
 .header {
     background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient background */
@@ -198,14 +188,41 @@ li {
 }
 
 /* Responsive Styles */
+
+
 @media (max-width: 768px) {
-    .input-box {
-        width: 90%;
-        padding: 20px;
+    body {
+        font-size: 0.9em;
+    }
+    .header {
+        padding: 20px 10px;
+        flex-wrap: wrap; /* Allow elements to stack if needed */
+        text-align: center; /* Center-align content for smaller screens */
+    }
+    .header h1 {
+        font-size: 2em; /* Adjust font size */
+        margin-bottom: 10px; /* Add space between the heading and image */
+        flex: 0 0 100%; /* Force heading to take full width */
     }
 
-    #guidance {
-        width: 90%;
-        margin: 20px auto;
+    .header p {
+        font-size: 1em;
+    }
+    .header img {
+        width: 60px;
+        height: 60px;
+        right: 10px;
+        margin: 0 auto;
+    }
+    .input-box {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+    .center-content {
+        flex-direction: column;
+    }
+    .image-box img {
+        width: 100%;
     }
 }
+
